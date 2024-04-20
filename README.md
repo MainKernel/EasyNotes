@@ -39,3 +39,52 @@
 * GOOGLE_CLIENT_SECRET = secret for Google oauth2 authentication
 * GITHUB_CLIENT_ID = client id for GitHub oauth2 authentication
 * GITHUB_CLIENT_SECRET = secret for GitHub oauth2 authentication
+
+***
+# FOR DEVELOPMENT
+
+* Create application-dev.properties in src/main/resources/
+###  ***and copy-past all below and change credentials for yours***
+***
+>spring.application.name=EasyNotes
+
+
+>######## POSTGRES DATABASE CONFIGURATION #############\
+#Using docker postgresql container through docker compose config file "compose.yaml"\
+spring.datasource.driver-class-name=org.postgresql.Driver\
+spring.datasource.url=jdbc:postgresql://localhost:32111/mydatabase\
+spring.datasource.username=myuser\
+spring.datasource.password=secret
+
+>######## HIBERNATE CONFIGURATION ##################\
+spring.jpa.hibernate.ddl-auto=none\
+spring.jpa.properties.hibernate.hbm2ddl.auto=none
+
+>######## LIQUIBASE CONFIGURATION ##################\
+spring.liquibase.url=jdbc:postgresql://localhost:32111/mydatabase\
+spring.liquibase.user=myuser\
+spring.liquibase.password=secret
+
+>######## VAADIN CONFIGURATION #####################\
+spring.mustache.check-template-location = false\
+#lounching browser\
+vaadin.launch-browser = true\
+vaadin.allowed-packages = com.vaadin,org.vaadin,dev.hilla,com.example.application\
+vaadin.blocked-packages=com.simplenotes.model, com.simplenotes.model
+
+>######## JAVA MAIL SENDER CONFIGURATION ############\
+spring.mail.host=smtp.gmail.com\
+spring.mail.port=587\
+spring.mail.username=<login user to smtp server>\
+spring.mail.password=<login password to smtp server>\
+spring.mail.properties.mail.smtp.auth=true\
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+>######## OAUTH2 CONFIGURATION #####################\
+#configuration for Google auth\
+#spring.security.oauth2.client.registration.google.client-id=\
+#spring.security.oauth2.client.registration.google.client-secret=\
+#configuration for GitHub auth\
+#spring.security.oauth2.client.registration.github.client-id=\
+#spring.security.oauth2.client.registration.github.client-secret=
+***
