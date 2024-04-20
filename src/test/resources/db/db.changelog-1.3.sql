@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS urls
     title   VARCHAR(128),
     content VARCHAR(1024),
     url     VARCHAR(512),
-    user_id BIGINT REFERENCES users (CTID)
+    user_id BIGINT REFERENCES users (id)
 );

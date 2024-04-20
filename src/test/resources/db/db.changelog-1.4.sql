@@ -4,15 +4,15 @@
 INSERT INTO users (id, first_name, last_name, user_time_zone, username, email, phone_number, password, role)
 VALUES
     (1, 'John', 'Doe', 'UTC', 'johndoe', 'johndoe@example.com', '+1234567890', 'hashed_password', 'user'),
-    (2, 'Alice', 'Smith', 'UTC', 'alicesmith', 'alice@example.com', '+1987654321', 'hashed_password', 'admin'),
-    (3, 'Emily', 'Brown', 'UTC', 'emilybrown', 'emily@example.com', '+1122334455', 'hashed_password', 'user'),
-    (4, 'Michael', 'Johnson', 'UTC', 'michaelj', 'michael@example.com', '+1122334455', 'hashed_password', 'user'),
-    (5, 'Sophia', 'Martinez', 'UTC', 'sophiam', 'sophia@example.com', '+9876543210', 'hashed_password', 'user'),
-    (6, 'William', 'Garcia', 'UTC', 'williamg', 'william@example.com', '+1122334455', 'hashed_password', 'user'),
-    (7, 'Olivia', 'Miller', 'UTC', 'oliviam', 'olivia@example.com', '+9876543210', 'hashed_password', 'admin'),
-    (8, 'James', 'Davis', 'UTC', 'jamesd', 'james@example.com', '+1122334455', 'hashed_password', 'user'),
-    (9, 'Emma', 'Wilson', 'UTC', 'emmaw', 'emma@example.com', '+1122334455', 'hashed_password', 'admin'),
-    (10, 'Liam', 'Taylor', 'UTC', 'liamt', 'liam@example.com', '+1234567890', 'hashed_password', 'user');
+    (2, 'Alice', 'Smith', 'UTC', 'alicesmith', 'alice@example.com', '+2345678901', 'hashed_password', 'admin'),
+    (3, 'Emily', 'Brown', 'UTC', 'emilybrown', 'emily@example.com', '+3456789012', 'hashed_password', 'user'),
+    (4, 'Michael', 'Johnson', 'UTC', 'michaelj', 'michael@example.com', '+4567890123', 'hashed_password', 'user'),
+    (5, 'Sophia', 'Martinez', 'UTC', 'sophiam', 'sophia@example.com', '+567890123', 'hashed_password', 'user'),
+    (6, 'William', 'Garcia', 'UTC', 'williamg', 'william@example.com', '+6789012345', 'hashed_password', 'user'),
+    (7, 'Olivia', 'Miller', 'UTC', 'oliviam', 'olivia@example.com', '+7890123456', 'hashed_password', 'admin'),
+    (8, 'James', 'Davis', 'UTC', 'jamesd', 'james@example.com', '+8901234567', 'hashed_password', 'user'),
+    (9, 'Emma', 'Wilson', 'UTC', 'emmaw', 'emma@example.com', '+9012345678', 'hashed_password', 'admin'),
+    (10, 'Liam', 'Taylor', 'UTC', 'liamt', 'liam@example.com', '+0123456789', 'hashed_password', 'user');
 
 INSERT INTO notes (id, title, content, user_id)
 VALUES
