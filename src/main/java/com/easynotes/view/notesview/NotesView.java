@@ -5,11 +5,13 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import jakarta.annotation.security.PermitAll;
 import jakarta.annotation.security.RolesAllowed;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 @Route(value = "notes", layout = EasyNotesAppLayout.class)
 @PageTitle("Notes")
-@RolesAllowed({"USER", "ADMIN"})
+@PermitAll
 public class NotesView extends VerticalLayout {
     public NotesView() {
         setSizeFull();

@@ -11,9 +11,8 @@ import com.vaadin.flow.theme.lumo.Lumo;
 
 @Route("forgotten-password")
 @PageTitle("Password restore")
-@Theme(Lumo.DARK)
 @AnonymousAllowed
-public class ForgottenPasswordView extends VerticalLayout implements AppShellConfigurator {
+public class ForgottenPasswordView extends VerticalLayout {
 
     public ForgottenPasswordView() {
         setSizeFull();

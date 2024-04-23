@@ -15,7 +15,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 @Theme(variant = Lumo.DARK)
 public class EasyNotesAppLayout extends AppLayout implements AppShellConfigurator {
-    private final boolean authenticated = SecurityContextHolder.getContext().getAuthentication().isAuthenticated();
+    private final boolean authenticated = SecurityContextHolder
+            .getContext().getAuthentication().getAuthorities().contains("USER");
 
     public EasyNotesAppLayout() {
         DrawerToggle drawerToggle = new DrawerToggle();
@@ -36,14 +37,14 @@ public class EasyNotesAppLayout extends AppLayout implements AppShellConfigurato
 
     private SideNav getNavTabs() {
         SideNav nav = new SideNav();
-        nav.addItem(new SideNavItem("Main Page", "/main-page", VaadinIcon.NEWSPAPER.create()),
+        nav.addItem(new SideNavItem("Main Page", "", VaadinIcon.NEWSPAPER.create()),
                 new SideNavItem("Notes", "/notes", VaadinIcon.NOTEBOOK.create()),
                 new SideNavItem("Reminders", "/reminders", VaadinIcon.CLOCK.create()),
                 new SideNavItem("Url manager", "/urls", VaadinIcon.COMPILE.create())
         );
         if(authenticated){
             nav.addItem(new SideNavItem("My Profile", "/profile", VaadinIcon.USER_CARD.create()));
-        nav.addItem(new SideNavItem("Logout", "/logout", VaadinIcon.ARROW_BACKWARD.create()));
+            nav.addItem(new SideNavItem("Logout", "/logout", VaadinIcon.ARROW_BACKWARD.create()));
         }else{
         new SideNavItem("Login", "/login", VaadinIcon.ANGLE_DOUBLE_RIGHT.create());
     }

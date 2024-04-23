@@ -36,10 +36,14 @@ public class UserEntity implements UserDetails{
     @Enumerated(value = EnumType.STRING)
     @Builder.Default
     private Role role = Role.USER;
-    private boolean isAccountNonExpired;
-    private boolean isAccountNonLocked;
-    private boolean isCredentialsNonExpired;
-    private boolean isEnabled;
+    @Builder.Default
+    private boolean isAccountNonExpired = true;
+    @Builder.Default
+    private boolean isAccountNonLocked = true;
+    @Builder.Default
+    private boolean isCredentialsNonExpired = true;
+    @Builder.Default
+    private boolean isEnabled = true;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

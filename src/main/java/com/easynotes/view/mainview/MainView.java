@@ -9,7 +9,7 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 import jakarta.annotation.security.PermitAll;
 
 @PageTitle("Main Page")
-@Route(value = "main-page", layout = EasyNotesAppLayout.class)
+@Route(value = "", layout = EasyNotesAppLayout.class)
 @PermitAll
 @AnonymousAllowed
 public class MainView extends VerticalLayout {
